@@ -22,21 +22,21 @@ repository               : "academicpages/academicpages.github.io"
 #               Additional customization can be done by editing /_includes/author-profile.html
 author:
   # Biographic information
-  avatar           : "profile.png"
+  avatar           : "LinkedIn.png"
   name             : "Kowkam Zhang"
   pronouns         : # example: "she/her"  
-  bio              : "szhan264@jh.edu"
-  location         : "Baltimore, MD"
-  employer         : "Johns Hopkins University"
+  bio              : "Doctoral Student"
+  location         : "Toronto, Canada"
+  employer         : "University of Toronto"
   uri              : # URL
-  email            : "szhan264@jh.edu" 
+  email            : "kowkam.zhang@mail.utoronto.ca" 
 
   # Academic websites
   academia         : # URL
   arxiv            : # URL - Update with the correct link to your profile
-  googlescholar    : # "https://scholar.google.com/citations?user=PS_CX0AAAAAJ"
+  googlescholar    : "https://scholar.google.com/citations?user=XvURZRMAAAAJ&hl=zh-CN"
   impactstory      : # URL
-  orcid            : # "http://orcid.org/yourorcidurl"
+  orcid            : "https://orcid.org/my-orcid?orcid=0009-0004-6696-4045"
   semantic         : # URL
   pubmed           : # "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
   researchgate     : # URL
