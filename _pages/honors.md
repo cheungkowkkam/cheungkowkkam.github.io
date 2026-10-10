@@ -12,11 +12,12 @@ author_profile: true
   }
 </style>
 
-##Scholarship
-**National Scholarship**, Sichuan University, December 2023.
-**Comprehensive 1st-Class Scholarship**, Sichuan University, October 2023.
+## Scholarship
+
+- **National Scholarship**, Sichuan University, December 2023.
+- **Comprehensive 1st-Class Scholarship**, Sichuan University, October 2023.
 
 
-##Honors
+## Honors
 
-##Competition Awards
+## Competition Awards
