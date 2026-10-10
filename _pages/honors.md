@@ -16,8 +16,13 @@ author_profile: true
 
 - **National Scholarship**, Sichuan University, December 2023.
 - **Comprehensive 1st-Class Scholarship**, Sichuan University, October 2023.
+- **Top 100 Students Scholarship**, Sichuan University, June 2023.
+- **National Inspirational Scholarship**, Sichuan University, April 2023.
+- **Comprehensive 2nd-Class Scholarship**, Sichuan University, October 2022.
 
 
 ## Honors
+
+
 
 ## Competition Awards
