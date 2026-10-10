@@ -13,9 +13,6 @@ redirect_from:
     text-justify: inter-word;
     hyphens: auto;
   }
-  .page__content .footnotes p {
-    text-align: left;
-  }
 </style>
 
 I'm a PhD Student in Health System Research (Health Economic Emphasis) from [the Institute of Health Policy, Management & Evaluation, University of Toronto](https://ihpme.utoronto.ca/). My research interests lie in **health economics, labor economics, and environmental economics**, with a particular focus on primary healthcare, health inequality, health disparity, underserved populations, and technological innovation. To date, my work has been published in *Finance Research Letters* and *Labor Economics Review* (CSSCI-indexed), and I have three additional working papers in progress.
