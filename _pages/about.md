@@ -7,6 +7,17 @@ redirect_from:
   - /about.html
 ---
 
+<style>
+  .page__content p {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+  }
+  .page__content .footnotes p {
+    text-align: left;
+  }
+</style>
+
 I'm a PhD Student in Health System Research (Health Economic Emphasis) from [the Institute of Health Policy, Management & Evaluation, University of Toronto](https://ihpme.utoronto.ca/). My research interests lie in **health economics, labor economics, and environmental economics**, with a particular focus on primary healthcare, health inequality, health disparity, underserved populations, and technological innovation. To date, my work has been published in *Finance Research Letters* and *Labor Economics Review* (CSSCI-indexed), and I have three additional working papers in progress.
 
 Previously, I was a full-time Research Associate from the [Johns Hopkins Primary Healthcare Policy Center](https://publichealth.jhu.edu/johns-hopkins-primary-care-policy-center). I had the honor of earning a Master of Health Science degree (Global Health Economics Track) from the [Johns Hopkins Bloomberg School of Public Health](https://publichealth.jhu.edu/), where I met an advisor who may have changed the course of my life: *Prof. Leiyu Shi*. Prior to that, I earned my Bachelor’s degree in Economics from Sichuan University, where I ranked first in my major based on overall academic performance, and received the National Scholarship.
