@@ -1,9 +1,12 @@
 {% include base_path %}
 
 {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% assign year = post.date | default: "1900-01-01" | date: "%Y" %}
+
+{% assign card_link = "" %}
 {% if post.paperurl %}
   {% assign card_link = post.paperurl | strip %}
-{% else %}
+{% elsif post.status != "working" %}
   {% capture card_link %}{{ base_path }}{{ post.url }}{% endcapture %}
 {% endif %}
 
@@ -23,14 +26,21 @@
 
 <div class="pub-card">
   {% if post.image %}
-    <a class="pub-card__thumb" href="{{ card_link }}" target="_blank" rel="noopener">
+    <div class="pub-card__thumb">
+      {% if card_link != "" %}<a href="{{ card_link }}" target="_blank" rel="noopener">{% endif %}
       <img src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ post.image | prepend: '/images/' | prepend: base_path }}{% endif %}" alt="">
-    </a>
+      {% if card_link != "" %}</a>{% endif %}
+    </div>
   {% endif %}
   <div class="pub-card__body">
-    <h4 class="pub-card__title"><a href="{{ card_link }}" target="_blank" rel="noopener">{{ title }}</a></h4>
+    <h4 class="pub-card__title">{% if card_link != "" %}<a href="{{ card_link }}" target="_blank" rel="noopener">{{ title }}</a>{% else %}{{ title }}{% endif %}</h4>
 
-    <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+    {% if post.status == "working" %}
+      {% if post.authors %}<p>{{ post.authors }}</p>{% endif %}
+      <p>Working paper{% if post.note %} ({{ post.note }}){% endif %}, {{ year }}</p>
+    {% else %}
+      <p>Published in <i>{{ post.venue }}</i>, {{ year }}</p>
+    {% endif %}
 
     {% if post.excerpt and site.read_more != 'enabled' %}
       <div class="pub-card__excerpt">{{ post.excerpt | markdownify }}</div>
