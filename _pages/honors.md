@@ -22,7 +22,12 @@ author_profile: true
 
 
 ## Honors
-
+- **Outstanding Graduate of Sichuan Province**, Sichuan Provincial Department of Education, 2024
+- **Outstanding Graduating Student Leader**, Sichuan University, 2024
+- **Self-Improvement Star of Chinese College Students (Nominee)**, Sichuan University, 2023
+- **Top 100 Collectives of Sichuan University (Team Member)**, Sichuan University, 2023
+- **Grade A Certificate of Comprehensive Quality for College Students of Sichuan Province**, Sichuan University, 2022
+- **Outstanding Student Leader**, Sichuan University, 2022
 
 
 ## Competition Awards
