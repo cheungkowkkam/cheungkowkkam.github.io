@@ -4,7 +4,7 @@ collection: publications
 category: economics
 status: published
 permalink: /publication/2024-welfare-lottery-urban-rural-income-inequality
-date: 2024-01-01
+date: 2024-07-31
 venue: 'Labor Economics Review'
 image: 'papers/ler-2024-welfare-lottery.png'
 paperurl: 'https://oversea.cnki.net/kcms2/article/abstract?v=NEcF25qTR9BZUYKyzLvpoOYMhwt7yLOJNp3shTG3rLo1z8-cNQxHp9EvcZjWmRA0XQtO72DY18bf_gO9_8Qs3zRJm9jZldkhzoEZ92QK2RrvuEJmY5nJNbrB8Y4-AXL9b6vfqVZwhDROPigkuM2oNMpC22cZ9p8eIXiXTKoOFl2UZltDcBL9eQ==&uniplatform=OVERSEA&language=CHS'
