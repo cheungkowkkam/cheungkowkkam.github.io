@@ -1,0 +1,45 @@
+{% include base_path %}
+
+{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
+{% if post.paperurl %}
+  {% assign card_link = post.paperurl | strip %}
+{% else %}
+  {% capture card_link %}{{ base_path }}{{ post.url }}{% endcapture %}
+{% endif %}
+
+{% assign links = "" | split: "" %}
+{% if post.paperurl %}
+  {% capture l %}<a href="{{ post.paperurl | strip }}" target="_blank" rel="noopener">Download Paper</a>{% endcapture %}
+  {% assign links = links | push: l %}
+{% endif %}
+{% if post.slidesurl %}
+  {% capture l %}<a href="{{ post.slidesurl | strip }}">Download Slides</a>{% endcapture %}
+  {% assign links = links | push: l %}
+{% endif %}
+{% if post.bibtexurl %}
+  {% capture l %}<a href="{{ post.bibtexurl | strip }}">Download Bibtex</a>{% endcapture %}
+  {% assign links = links | push: l %}
+{% endif %}
+
+<div class="pub-card">
+  {% if post.image %}
+    <a class="pub-card__thumb" href="{{ card_link }}" target="_blank" rel="noopener">
+      <img src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ post.image | prepend: '/images/' | prepend: base_path }}{% endif %}" alt="">
+    </a>
+  {% endif %}
+  <div class="pub-card__body">
+    <h4 class="pub-card__title"><a href="{{ card_link }}" target="_blank" rel="noopener">{{ title }}</a></h4>
+
+    <p>Published in <i>{{ post.venue }}</i>, {{ post.date | default: "1900-01-01" | date: "%Y" }}</p>
+
+    {% if post.excerpt and site.read_more != 'enabled' %}
+      <div class="pub-card__excerpt">{{ post.excerpt | markdownify }}</div>
+    {% endif %}
+
+    {% if post.citation %}
+      <p>Recommended citation: {{ post.citation }}{% if links.size > 0 %}<br />{{ links | join: " | " }}{% endif %}</p>
+    {% elsif links.size > 0 %}
+      <p>{{ links | join: " | " }}</p>
+    {% endif %}
+  </div>
+</div>
