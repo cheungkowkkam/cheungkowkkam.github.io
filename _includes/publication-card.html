@@ -37,7 +37,9 @@
 
     {% if post.status == "working" %}
       {% if post.authors %}<p>{{ post.authors }}</p>{% endif %}
-      <p>Working paper{% if post.note %} ({{ post.note }}){% endif %}, {{ year }}</p>
+      <p><i>Working paper</i>{% if post.note %} (<b>{{ post.note }}</b>){% endif %}, {{ year }}</p>
+      {% if post.presented %}<p><i>Presented at:</i> {{ post.presented }}</p>{% endif %}
+      {% if post.keywords %}<p><i>Keywords:</i> {{ post.keywords }}</p>{% endif %}
     {% else %}
       <p>Published in <i>{{ post.venue }}</i>, {{ year }}</p>
     {% endif %}
