@@ -24,7 +24,7 @@
   {% assign links = links | push: l %}
 {% endif %}
 
-<div class="pub-card">
+<div class="pub-card{% if post.status == 'working' %} pub-card--working{% endif %}">
   {% if post.image %}
     <div class="pub-card__thumb">
       {% if card_link != "" %}<a href="{{ card_link }}" target="_blank" rel="noopener">{% endif %}
@@ -37,7 +37,7 @@
 
     {% if post.status == "working" %}
       {% if post.authors %}<p>{{ post.authors }}</p>{% endif %}
-      <p><i>Working paper</i>{% if post.note %} (<b>{{ post.note }}</b>){% endif %}, {{ year }}</p>
+      <p><i>Working paper</i>{% if post.note %} <span class="pub-badge">{{ post.note }}</span>{% endif %} · {{ year }}</p>
       {% if post.presented %}<p><i>Presented at:</i> {{ post.presented }}</p>{% endif %}
       {% if post.keywords %}<p><i>Keywords:</i> {{ post.keywords }}</p>{% endif %}
     {% else %}
