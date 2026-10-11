@@ -5,7 +5,13 @@ author_profile: true
 ---
 
 <style>
-  .page__content p, .page__content li {
+  .page { padding-right: 0 !important; }
+  .page__content ul { padding-left: 1.2em; }
+  .page__content li {
+    font-size: 0.92em;
+    text-align: left;
+  }
+  .page__content p {
     text-align: justify;
     text-justify: inter-word;
     hyphens: auto;
@@ -22,11 +28,11 @@ author_profile: true
 
 
 ## Honors
-- **Outstanding Graduate of Sichuan Province**, Sichuan Provincial Department of Education, 2024
+- **Outstanding Graduate of Sichuan Province**, Sichuan Provincial Education Dept., 2024
 - **Outstanding Graduating Student Leader**, Sichuan University, 2024
 - **Self-Improvement Star of Chinese College Students (Nominee)**, Sichuan University, 2023
 - **Top 100 Collectives of Sichuan University (Team Member)**, Sichuan University, 2023
-- **Grade A Certificate of Comprehensive Quality for College Students of Sichuan Province**, Sichuan University, 2022
+- **Grade A Certificate of Comprehensive Quality**, Sichuan Province, 2022
 - **Outstanding Student Leader**, Sichuan University, 2022
 
 
