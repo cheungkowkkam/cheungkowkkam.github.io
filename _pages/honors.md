@@ -18,6 +18,10 @@ author_profile: true
   }
 </style>
 
+## Talent Titles
+
+- **"Bailu Yingcai" (Egret Elite) Talent**, Baqiao District, Xi'an, 2023
+
 ## Scholarship
 
 - **National Scholarship**, Sichuan University, December 2023.
@@ -59,7 +63,7 @@ author_profile: true
 - **Second Prize**, The 5th "Tianfu Cup" Entrepreneurship Competition of Sichuan Province, 2025 (*Organized by the Department of Human Resources and Social Security of Sichuan Province*)
 - **First Prize**, "Rongpiao Cup" Jiaozi Young Talent Innovation and Entrepreneurship Competition, 2025 (*Organized by the Chengdu Municipal Committee of the Communist Youth League*)
 - **Second Prize**, "Qingchuang Cup" Guangzhou Youth Innovation and Entrepreneurship Competition, 2025 (*Organized by the Guangzhou Municipal Committee of the Communist Youth League*)
-- **Third Prize**, "Golden Panda" Global Innovation and Entrepreneurship Competition, 2025 (*Organized by the Chengdu High-tech Zone*)
+- **Third Prize**, "Golden Panda" Global Innovation and Entrepreneurship Competition, 2025 (*Organized by the Chengdu High-tech District*)
 - **First Prize**, The 1st Xianhu Innovation and Entrepreneurship Competition, 2025 (*Organized by the Science and Technology Bureau of Nanhai District, Foshan*)
 - **First Prize**, Zhongshan "Taili Cup" Rural Youth Entrepreneurship Competition, 2025 (*Organized by the Organization Department of the Zhongshan Municipal Party Committee*)
 - **National Top 50 Pioneer Award**, "Songhu Cup" Innovation and Entrepreneurship Competition, 2025 & 2024 (*Organized by the Songshan Lake Science and Technology Bureau*)
