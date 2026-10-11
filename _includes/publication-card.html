@@ -1,7 +1,7 @@
 {% include base_path %}
 
 {% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% assign year = post.date | default: "1900-01-01" | date: "%Y" %}
+{% assign year = post.date | default: "1900-01-01" | date: "%B %Y" %}
 
 {% assign card_link = "" %}
 {% if post.paperurl %}
