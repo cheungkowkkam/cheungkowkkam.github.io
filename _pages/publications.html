@@ -5,32 +5,60 @@ permalink: /publications/
 author_profile: true
 ---
 
+<style>
+  .pub-card {
+    display: flex;
+    gap: 1.2em;
+    align-items: flex-start;
+    margin: 1.2em 0;
+    padding-bottom: 1.2em;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.25);
+  }
+  .pub-card__thumb { flex: 0 0 200px; }
+  .pub-card__thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+  }
+  .pub-card__body { flex: 1; min-width: 0; }
+  .pub-card__title { margin: 0 0 0.3em; font-size: 1.05em; }
+  .pub-card__body p { margin: 0.3em 0; }
+  @media (max-width: 600px) {
+    .pub-card { flex-direction: column; }
+    .pub-card__thumb { flex: none; width: 100%; max-width: 320px; }
+  }
+</style>
+
 {% if site.author.googlescholar %}
   <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
 {% endif %}
 
 {% include base_path %}
 
-<!-- New style rendering if publication categories are defined -->
-{% if site.publication_category %}
-  {% for category in site.publication_category  %}
-    {% assign title_shown = false %}
-    {% for post in site.publications reversed %}
-      {% if post.category != category[0] %}
-        {% continue %}
-      {% endif %}
-      {% unless title_shown %}
-        <h2>{{ category[1].title }}</h2><hr />
-        {% assign title_shown = true %}
-      {% endunless %}
-      {% include archive-single.html %}
-    {% endfor %}
-  {% endfor %}
-{% else %}
-  {% for post in site.publications reversed %}
-    {% include archive-single.html %}
-  {% endfor %}
-{% endif %}
+{% assign status_codes = "published|working" | split: "|" %}
+{% assign status_titles = "Published|Working Papers" | split: "|" %}
 
+{% for category in site.publication_category %}
+  {% assign cat_posts = site.publications | where: "category", category[0] %}
+  {% if cat_posts.size > 0 %}
+    <h2>{{ category[1].title }}</h2><hr />
+
+    {% for code in status_codes %}
+      {% assign group = cat_posts | where: "status", code | sort: "date" | reverse %}
+      {% if group.size > 0 %}
+        <h3>{{ status_titles[forloop.index0] }}</h3>
+        {% for post in group %}
+          {% if code == "published" %}
+            {% include publication-card.html %}
+          {% else %}
+            {% include archive-single.html %}
+          {% endif %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
+{% endfor %}
 
 
