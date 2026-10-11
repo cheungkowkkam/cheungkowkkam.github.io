@@ -22,7 +22,7 @@ author_profile: true
 
 - **"Bailu Yingcai" (Egret Elite) Talent**, Baqiao District, Xi'an, 2023
 
-## Scholarship
+## Scholarships
 
 - **National Scholarship**, Sichuan University, December 2023.
 - **Comprehensive 1st-Class Scholarship**, Sichuan University, October 2023.
