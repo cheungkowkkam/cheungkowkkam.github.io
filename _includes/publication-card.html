@@ -37,7 +37,7 @@
 
     {% if post.status == "working" %}
       {% if post.authors %}<p>{{ post.authors }}</p>{% endif %}
-      <p><i>Working paper</i>{% if post.note %} <span class="pub-badge">{{ post.note }}</span>{% endif %} · {{ year }}</p>
+      <p><i>Working paper</i>{% if post.note %} <span class="pub-badge pub-badge--{{ post.note | slugify }}">{{ post.note }}</span>{% endif %} · {{ year }}</p>
       {% if post.presented %}<p><i>Presented at:</i> {{ post.presented }}</p>{% endif %}
       {% if post.keywords %}<p><i>Keywords:</i> {{ post.keywords }}</p>{% endif %}
     {% else %}
