@@ -89,8 +89,8 @@ author_profile: true
   }
 </style>
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
+{% if site.author.googlescholar or site.author.orcid %}
+  <div class="wordwrap">You can find all my articles on {% if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}{% if site.author.googlescholar and site.author.orcid %} or {% endif %}{% if site.author.orcid %}<a href="{{ site.author.orcid }}">ORCID</a>{% endif %}.</div>
 {% endif %}
 
 {% include base_path %}
