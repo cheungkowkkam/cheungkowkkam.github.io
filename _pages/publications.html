@@ -50,11 +50,7 @@ author_profile: true
       {% if group.size > 0 %}
         <h3>{{ status_titles[forloop.index0] }}</h3>
         {% for post in group %}
-          {% if code == "published" %}
-            {% include publication-card.html %}
-          {% else %}
-            {% include archive-single.html %}
-          {% endif %}
+          {% include publication-card.html %}
         {% endfor %}
       {% endif %}
     {% endfor %}
