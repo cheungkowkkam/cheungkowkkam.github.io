@@ -17,7 +17,7 @@ author_profile: true
     border-radius: 0 6px 6px 0;
   }
 
-  /* 状态小标签：Published / Working Papers */
+  /* 状态标签：Published / Working Papers */
   .pub-status {
     display: inline-block;
     margin: 1.1em 0 0.2em;
@@ -63,17 +63,25 @@ author_profile: true
   .pub-card__title { margin: 0 0 0.3em; font-size: 1.05em; }
   .pub-card__body p { margin: 0.3em 0; }
 
-  /* 状态备注：Under review 等 */
+  /* 状态胶囊：颜色由 --b 控制，默认橙色 */
   .pub-badge {
+    --b: 199, 130, 26;
     display: inline-block;
     padding: 0 0.6em;
     font-size: 0.85em;
     font-weight: 700;
-    color: #c7821a;
-    background: rgba(199, 130, 26, 0.12);
-    border: 1px solid rgba(199, 130, 26, 0.5);
+    color: rgb(var(--b));
+    background: rgba(var(--b), 0.12);
+    border: 1px solid rgba(var(--b), 0.5);
     border-radius: 999px;
   }
+  .pub-badge--under-review           { --b: 199, 130, 26; }  /* 橙 */
+  .pub-badge--revise-and-resubmit    { --b: 142, 68, 173; }  /* 紫 */
+  .pub-badge--conditionally-accepted { --b: 41, 128, 185; }  /* 蓝 */
+  .pub-badge--accepted               { --b: 46, 139, 87; }   /* 绿 */
+  .pub-badge--forthcoming            { --b: 46, 139, 87; }   /* 绿 */
+  .pub-badge--preprint               { --b: 22, 160, 133; }  /* 青绿 */
+  .pub-badge--in-preparation         { --b: 22, 160, 133; }  /* 青绿，同 Preprint */
 
   @media (max-width: 600px) {
     .pub-card { flex-direction: column; }
