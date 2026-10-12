@@ -24,10 +24,10 @@ author_profile: true
 
 ## Scholarships
 
-- **National Scholarship**, Sichuan University, December 2023.
+- **National Scholarship**, Ministry of Education of the People's Republic of China, December 2023.
 - **Comprehensive 1st-Class Scholarship**, Sichuan University, October 2023.
 - **Top 100 Students Scholarship**, Sichuan University, June 2023.
-- **National Inspirational Scholarship**, Sichuan University, April 2023.
+- **National Inspirational Scholarship**, Ministry of Education of the People's Republic of China, April 2023.
 - **Comprehensive 2nd-Class Scholarship**, Sichuan University, October 2022.
 
 
@@ -36,7 +36,7 @@ author_profile: true
 - **Outstanding Graduating Student Leader**, Sichuan University, 2024
 - **Self-Improvement Star of Chinese College Students (Nominee)**, Sichuan University, 2023
 - **Top 100 Collectives of Sichuan University (Team Member)**, Sichuan University, 2023
-- **Grade A Certificate of Comprehensive Quality**, Sichuan Province, 2022
+- **Grade A Certificate of Comprehensive Quality for College Students**, Sichuan Provincial Students' Federation, 2022
 - **Outstanding Student Leader**, Sichuan University, 2022
 
 
@@ -53,7 +53,7 @@ author_profile: true
 - **National Third Prize**, National College Students' Social Practice and Science & Technology Competition on Energy Conservation and Emission Reduction, 2022 (*Organized by the Department of Higher Education, Ministry of Education*)
 
 
-### Government -Organized Competitions
+### Government-Organized Competitions
 
 - **Second Runner-up (Startup Team Category)**, Macao Youth Innovation and Entrepreneurship Competition, 2026 (*Guided by the Economic and Technological Development Bureau, Macao SAR Government*)
 - **Bank of China Most Promising Startup Team Award**, Macao Youth Innovation and Entrepreneurship Competition, 2026 (*Guided by the Economic and Technological Development Bureau, Macao SAR Government*)
