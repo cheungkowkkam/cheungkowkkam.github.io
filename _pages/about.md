@@ -11,7 +11,6 @@ redirect_from:
   .page__content p {
     text-align: justify;
     text-justify: inter-word;
-    hyphens: auto;
   }
 </style>
 
