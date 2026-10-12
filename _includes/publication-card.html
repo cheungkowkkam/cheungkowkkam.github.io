@@ -1,57 +1,118 @@
+---
+layout: archive
+title: "Publications"
+permalink: /publications/
+author_profile: true
+---
+
+<style>
+  /* 类别标题：Economics / Public Health */
+  .pub-cat {
+    margin: 2em 0 0.4em;
+    padding: 0.4em 0.8em;
+    font-size: 1.25em;
+    border-left: 5px solid #52adc8;
+    border-bottom: none;
+    background: rgba(82, 173, 200, 0.12);
+    border-radius: 0 6px 6px 0;
+  }
+
+  /* 状态标签：Published / Working Papers */
+  .pub-status {
+    display: inline-block;
+    margin: 1.1em 0 0.2em;
+    padding: 0.15em 0.9em;
+    font-size: 0.78em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border: 1px solid;
+    border-radius: 999px;
+  }
+  .pub-status--published { color: #2e8b57; background: rgba(46, 139, 87, 0.10); }
+  .pub-status--working   { color: #c7821a; background: rgba(199, 130, 26, 0.10); }
+
+  /* 论文卡片 */
+  .pub-card {
+    display: flex;
+    gap: 1.2em;
+    align-items: flex-start;
+    margin: 0.9em 0;
+    padding: 1em 1.1em;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+    border-left: 4px solid #2e8b57;
+    border-radius: 8px;
+    background: rgba(128, 128, 128, 0.05);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+  .pub-card:hover {
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+  }
+  .pub-card--working { border-left-color: #c7821a; }
+
+  .pub-card__thumb { flex: 0 0 200px; }
+  .pub-card__thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    border: 1px solid rgba(128, 128, 128, 0.25);
+  }
+  .pub-card__body { flex: 1; min-width: 0; }
+  .pub-card__title { margin: 0 0 0.3em; font-size: 1.05em; }
+  .pub-card__body p { margin: 0.3em 0; }
+
+  /* 胶囊：颜色由 --b 控制，默认橙色 */
+  .pub-badge {
+    --b: 199, 130, 26;
+    display: inline-block;
+    padding: 0 0.6em;
+    font-size: 0.85em;
+    font-weight: 700;
+    color: rgb(var(--b));
+    background: rgba(var(--b), 0.12);
+    border: 1px solid rgba(var(--b), 0.5);
+    border-radius: 999px;
+  }
+  .pub-badge--under-review           { --b: 199, 130, 26; }  /* 橙 */
+  .pub-badge--revise-and-resubmit    { --b: 142, 68, 173; }  /* 紫 */
+  .pub-badge--conditionally-accepted { --b: 41, 128, 185; }  /* 蓝 */
+  .pub-badge--accepted               { --b: 46, 139, 87; }   /* 绿 */
+  .pub-badge--forthcoming            { --b: 46, 139, 87; }   /* 绿 */
+  .pub-badge--preprint               { --b: 22, 160, 133; }  /* 青绿 */
+  .pub-badge--in-preparation         { --b: 22, 160, 133; }  /* 青绿，同 Preprint */
+  .pub-badge--esi-highly-cited-paper { --b: 200, 50, 80; }   /* 玫红 */
+  .pub-badge--esi-highly-cited-paper::before { content: "★ "; }
+
+  @media (max-width: 600px) {
+    .pub-card { flex-direction: column; }
+    .pub-card__thumb { flex: none; width: 100%; max-width: 320px; }
+  }
+</style>
+
+{% if site.author.googlescholar or site.author.orcid %}
+  <div class="wordwrap">You can find all my articles on {% if site.author.googlescholar %}<a href="{{ site.author.googlescholar }}">Google Scholar</a>{% endif %}{% if site.author.googlescholar and site.author.orcid %} or {% endif %}{% if site.author.orcid %}<a href="{{ site.author.orcid }}">ORCID</a>{% endif %}.</div>
+{% endif %}
+
 {% include base_path %}
 
-{% assign title = post.title | markdownify | remove: "<p>" | remove: "</p>" %}
-{% assign year = post.date | default: "1900-01-01" | date: "%B %Y" %}
+{% assign status_codes = "published|working" | split: "|" %}
+{% assign status_titles = "Published|Working Papers" | split: "|" %}
 
-{% assign card_link = "" %}
-{% if post.paperurl %}
-  {% assign card_link = post.paperurl | strip %}
-{% elsif post.status != "working" %}
-  {% capture card_link %}{{ base_path }}{{ post.url }}{% endcapture %}
-{% endif %}
+{% for category in site.publication_category %}
+  {% assign cat_posts = site.publications | where: "category", category[0] %}
+  {% if cat_posts.size > 0 %}
+    <h2 class="pub-cat">{{ category[1].title }}</h2>
 
-{% assign links = "" | split: "" %}
-{% if post.paperurl %}
-  {% capture l %}<a href="{{ post.paperurl | strip }}" target="_blank" rel="noopener">Download Paper</a>{% endcapture %}
-  {% assign links = links | push: l %}
-{% endif %}
-{% if post.slidesurl %}
-  {% capture l %}<a href="{{ post.slidesurl | strip }}">Download Slides</a>{% endcapture %}
-  {% assign links = links | push: l %}
-{% endif %}
-{% if post.bibtexurl %}
-  {% capture l %}<a href="{{ post.bibtexurl | strip }}">Download Bibtex</a>{% endcapture %}
-  {% assign links = links | push: l %}
-{% endif %}
-
-<div class="pub-card{% if post.status == 'working' %} pub-card--working{% endif %}">
-  {% if post.image %}
-    <div class="pub-card__thumb">
-      {% if card_link != "" %}<a href="{{ card_link }}" target="_blank" rel="noopener">{% endif %}
-      <img src="{% if post.image contains '://' %}{{ post.image }}{% else %}{{ post.image | prepend: '/images/' | prepend: base_path }}{% endif %}" alt="">
-      {% if card_link != "" %}</a>{% endif %}
-    </div>
+    {% for code in status_codes %}
+      {% assign group = cat_posts | where: "status", code | sort: "date" | reverse %}
+      {% if group.size > 0 %}
+        <h3 class="pub-status pub-status--{{ code }}">{{ status_titles[forloop.index0] }}</h3>
+        {% for post in group %}
+          {% include publication-card.html %}
+        {% endfor %}
+      {% endif %}
+    {% endfor %}
   {% endif %}
-  <div class="pub-card__body">
-    <h4 class="pub-card__title">{% if card_link != "" %}<a href="{{ card_link }}" target="_blank" rel="noopener">{{ title }}</a>{% else %}{{ title }}{% endif %}</h4>
-
-    {% if post.status == "working" %}
-      {% if post.authors %}<p>{{ post.authors }}</p>{% endif %}
-      <p><i>Working paper</i>{% if post.note %} <span class="pub-badge pub-badge--{{ post.note | slugify }}">{{ post.note }}</span>{% endif %} · {{ year }}</p>
-      {% if post.presented %}<p><i>Presented at:</i> {{ post.presented }}</p>{% endif %}
-      {% if post.keywords %}<p><i>Keywords:</i> {{ post.keywords }}</p>{% endif %}
-    {% else %}
-      <p>Published in <i>{{ post.venue }}</i>, {{ year }}</p>
-    {% endif %}
-
-    {% if post.excerpt and site.read_more != 'enabled' %}
-      <div class="pub-card__excerpt">{{ post.excerpt | markdownify }}</div>
-    {% endif %}
-
-    {% if post.citation %}
-      <p>Recommended citation: {{ post.citation }}{% if links.size > 0 %}<br />{{ links | join: " | " }}{% endif %}</p>
-    {% elsif links.size > 0 %}
-      <p>{{ links | join: " | " }}</p>
-    {% endif %}
-  </div>
-</div>
+{% endfor %}
