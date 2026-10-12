@@ -4,7 +4,7 @@ collection: publications
 category: economics
 status: published
 permalink: /publication/2026-media-environmental-coverage-green-innovation
-date: 2026-01-26
+date: 2026-03-01
 venue: 'Finance Research Letters'
 badge: 'ESI Highly Cited Paper'
 image: 'papers/frl-2026-media.png'
