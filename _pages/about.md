@@ -21,7 +21,7 @@ Previously, I was a full-time Research Associate at the [Johns Hopkins Primary H
 
 I have also maintained a long-standing interest in the translation and investment of medical technologies. As team leader, I won a **National Gold Award** in the Science and Technology Track of [the 2025 “Chuang Qingchun” China Youth Innovation and Entrepreneurship Competition](https://cqc.yeeol.com/)[^1], and **Global Silver Awards** in [the China International College Students’ Innovation Competition](https://www.pilcchina.org/)[^2] in both 2024 and 2025. Previously, I was part of teams that won **National Gold Awards** in the same competition in 2022 and 2023.
 
-As a first-generation college student, I am deeply grateful to my parents, mentors, friends, and alma mater for helping me transition from a small county in Northeast China to world-leading academic institutions.
+As a first-generation college student, I am deeply grateful to my parents, advisors, friends, and alma mater for helping me transition from a small county in Northeast China to world-leading academic institutions.
 
 [^1]:The “Chuang Qingchun” China Youth Innovation and Entrepreneurship Competition is a national-level competition jointly organized by the Central Committee of the Communist Youth League of China, the Ministry of Education, and other national agencies. It is regarded as one of the most prestigious youth innovation and entrepreneurship competitions in China.
 
