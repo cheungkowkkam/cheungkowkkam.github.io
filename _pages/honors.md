@@ -24,10 +24,10 @@ author_profile: true
 
 ## Scholarships
 
-- **National Scholarship**, Ministry of Education of the People's Republic of China, December 2023.
+- **Chinese National Scholarship**, Ministry of Education of the People's Republic of China, December 2023.
 - **Comprehensive 1st-Class Scholarship**, Sichuan University, October 2023.
 - **Top 100 Students Scholarship**, Sichuan University, June 2023.
-- **National Inspirational Scholarship**, Ministry of Education of the People's Republic of China, April 2023.
+- **Chinese National Inspirational Scholarship**, Ministry of Education of the People's Republic of China, April 2023.
 - **Comprehensive 2nd-Class Scholarship**, Sichuan University, October 2022.
 
 
